@@ -47,6 +47,7 @@ class Player():
             self.player_death()
         else:
             print("HP --- "+str(self.hp))
+            print("SASI 4LEN")
 
     def update_strong(self, strong):
         self.strong += strong
