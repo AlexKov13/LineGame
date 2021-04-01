@@ -24,6 +24,8 @@ myCar.update_odometr(11)
 myCar.update_odometr(1)
 myCar.read_odometr()"""
 
+import time
+
 class Player():
     def __init__(self, hp, strong, defence, speed):
         self.hp = hp
@@ -91,6 +93,13 @@ class Wizard(Player):
         self.view_stats()
         print("Magic - "+str(self.magical))
 
+def printf(msg):
+    for i in msg:
+        print(i, sep=' ', end='', flush=True)
+        i == '.' and time.sleep(1) or time.sleep(0.1)
+
+printf("Ви отямились в печері і відчули що лежите в калюжі. Ви згадали що в останній битві ви використали всю ману на [Blink] щоб зробити ривок в рандомне місце в радіусі 100м від вас. І зараз перед вами стоїй воїн, який явно агресивно настроєний проти вас. У вас є тільки один вихід.\n")
+
 PlayerWarrior = Warrior(100, 75, 80, 70, 55)
 PlayerWarrior.sword_attack()
 PlayerWarrior.view_stats()
@@ -106,5 +115,3 @@ PlayerWizard.view_stats_wizard()
 #Player1.update_strong(21)
 #Player1.update_defence(23)
 #Player1.decrement_hp(200)
-
-
